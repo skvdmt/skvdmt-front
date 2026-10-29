@@ -1,0 +1,15 @@
+:root {
+  color-scheme: light dark;
+  --background-color-very-dark: light-dark(#eee, #111); // 1
+  --background-color-dark: light-dark(#e6e6e6, #141414); // 2
+  --background-color-light: light-dark(#e0e0e0, #222); // 3
+  --background-color-very-light: light-dark(#c9c9c9, #333); // 4
+  --color: light-dark(rgb(0, 0, 0, 0.87), rgb(255, 255, 255, 0.87));
+  --link-color: light-dark(#336399, #99c3ff);
+  --link-color-visited: light-dark(#652a99, #c58af9);
+  --photo-shadow-color: light-dark(#111, #111);
+  --footer-link-color: light-dark(#003, #ccf);
+  --location-color: light-dark(#666, #999);
+  --footer-link-color-title: light-dark(#330, #ccf);
+  --footer-link-color-url: light-dark(#669, #669);
+}
