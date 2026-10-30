@@ -1,12 +1,11 @@
-FROM node:alpine AS builder
+FROM node:22-alpine AS builder
 WORKDIR /src
 COPY package*.json ./
-RUN npm install
 RUN npm ci
 COPY . .
 RUN npm run build
 
-FROM node:alpine AS runner
+FROM node:22-alpine AS runner
 EXPOSE 8000
 WORKDIR /app
 ENV NODE_ENV=production
