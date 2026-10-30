@@ -9,6 +9,7 @@
 Frontend application for my personal homepage.
 
 The application interacts with a backend API to retrieve the information required to construct the page's DOM model.
+
 Server-side rendering has been implemented using Nuxt 4.
 
 ### Download
