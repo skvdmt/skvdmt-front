@@ -94,12 +94,45 @@ useSeoMeta({
       align-self: flex-end;
       object-fit: contain;
       min-height: 400px;
-      mask-image: linear-gradient(
-        180deg,
-        var(--photo-shadow-color) 80%,
-        transparent 100%
-      );
-      background-image: light-dark(none, url(/images/photo.png));
+      background-image:
+        light-dark(
+          linear-gradient(
+            to right,
+            var(--photo-gradient-color) 15%,
+            transparent 30%
+          ),
+          linear-gradient(
+            to right,
+            var(--photo-gradient-color) 5%,
+            transparent 20%
+          )
+        ),
+        light-dark(
+          linear-gradient(
+            to left,
+            var(--photo-gradient-color) 15%,
+            transparent 30%
+          ),
+          linear-gradient(
+            to left,
+            var(--photo-gradient-color) 5%,
+            transparent 20%
+          )
+        ),
+        light-dark(
+          linear-gradient(
+            to top,
+            var(--photo-gradient-color) 5%,
+            transparent 20%
+          ),
+          linear-gradient(
+            to top,
+            var(--photo-gradient-color) 5%,
+            transparent 20%
+          )
+        ),
+        light-dark(url(/images/photo-light.webp), url(/images/photo-dark.webp));
+
       background-repeat: no-repeat;
       background-position: center bottom;
       background-size: contain;
