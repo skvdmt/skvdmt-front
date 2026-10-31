@@ -6,11 +6,11 @@
 </template>
 
 <style>
-@import url('@/scss/colors.scss');
+@import url("@/scss/colors.scss");
 
 @font-face {
   font-family: OpenSans;
-  src: url('/fonts/OpenSans-VariableFont_wdth,wght.ttf');
+  src: url("/fonts/OpenSans-VariableFont_wdth,wght.ttf");
 }
 
 * {
@@ -22,7 +22,7 @@
 :root {
   line-height: 1.5;
   font-weight: 300;
-  font-family: OpenSans,serif;
+  font-family: OpenSans, serif;
   background-color: var(--background-color-very-dark);
   color: var(--color);
 
@@ -83,22 +83,3 @@
   }
 }
 </style>
-
-<!-- <script setup>
-const { data } = await useFetch(() => `https://skvdmt.ru/api/v1/text/main`)
-const defaultTitle = "Dima"
-
-useSeoMeta({
-  title: data.value?.text || defaultTitle,
-  description: 'Мое крутое SSR приложение на Nuxt 4 и Go',
-  ogTitle: data.value?.text || defaultTitle,
-})
-</script>
-
-<template>
-  <div>
-    <h1>Hello</h1>
-    <p>{{ data.text }}</p>
-    <p>This is server-side render content!</p>
-  </div>
-</template> -->
