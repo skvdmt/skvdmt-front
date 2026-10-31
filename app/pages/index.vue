@@ -21,6 +21,7 @@
 
 :root {
   line-height: 1.5;
+  letter-spacing: 0.02em;
   font-weight: 300;
   font-family: OpenSans, serif;
   background-color: var(--background-color-very-dark);
