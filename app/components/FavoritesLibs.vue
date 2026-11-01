@@ -27,17 +27,17 @@ if (libs.error.value) {
 @import url("@/scss/colors.scss");
 
 .libs {
-  min-height: 30px;
+  min-height: 3rem;
   text-align: center;
   display: flex;
-  gap: 5px;
+  gap: 0.5rem;
   justify-content: center;
   flex-wrap: wrap;
 
   a {
     background-color: var(--background-color-very-light);
-    border-radius: 4px;
-    padding: 3px 5px;
+    border-radius: 0.4rem;
+    padding: 0.3rem 0.5rem;
     text-wrap: nowrap;
   }
 }

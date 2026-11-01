@@ -63,50 +63,50 @@ examples.data.value.forEach((ex) => {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 2rem;
 
   .example {
-    min-height: 600px;
+    min-height: 60rem;
     background-color: var(--background-color-light);
     flex-grow: 1;
-    width: 350px;
-    border-radius: 10px;
-    @media (max-width: 600px) {
+    width: 35rem;
+    border-radius: 1rem;
+    @media (max-width: 60rem) {
       min-height: auto;
       border-radius: 0;
     }
 
-    padding: 20px;
+    padding: 2rem;
 
     @media (max-width: 400px) {
-      min-width: 200px;
+      min-width: 20rem;
     }
 
     img {
       display: block;
-      margin: 40px auto;
+      margin: 4rem auto;
     }
 
     .description {
-      margin: 0 0 20px;
+      margin: 0 0 2rem;
     }
 
     .links {
-      margin: 0 0 20px;
+      margin: 0 0 2rem;
       display: flex;
       flex-wrap: wrap;
-      gap: 5px;
+      gap: 0.5rem;
 
       a {
         background-color: var(--background-color-very-light);
-        border-radius: 4px;
-        padding: 3px 5px;
+        border-radius: 0.4rem;
+        padding: 0.3rem 0.5rem;
         text-wrap: nowrap;
       }
     }
 
     .technologies {
-      margin: 0 0 20px;
+      margin: 0 0 2rem;
 
       .title {
         font-weight: 400;
@@ -115,18 +115,18 @@ examples.data.value.forEach((ex) => {
 
     .sources {
       display: flex;
-      gap: 5px;
+      gap: 0.5rem;
       flex-wrap: wrap;
 
       .title {
-        padding: 3px 0;
+        padding: 0.3rem 0;
         font-weight: 400;
       }
 
       a {
         background-color: var(--background-color-very-light);
-        border-radius: 4px;
-        padding: 3px 5px;
+        border-radius: 0.4rem;
+        padding: 0.3rem 0.5rem;
         text-wrap: nowrap;
       }
     }

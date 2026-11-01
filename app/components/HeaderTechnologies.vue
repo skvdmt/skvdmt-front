@@ -43,26 +43,26 @@ if (technologies.error.value) {
 @import url("@/scss/colors.scss");
 
 .technologies {
-  min-height: 94px;
+  min-height: 9.4rem;
   display: flex;
   flex-wrap: wrap;
-  font-size: 1.3em;
-  gap: 10px;
+  font-size: 2rem;
+  gap: 1rem;
 
   .technology {
     background-color: var(--background-color-light);
     display: flex;
-    padding: 10px;
-    border-radius: 8px;
+    padding: 1rem;
+    border-radius: 0.8rem;
     align-items: center;
 
     .name {
-      padding-left: 10px;
-      padding-right: 8px;
+      padding-left: 1rem;
+      padding-right: 0.8rem;
       text-wrap: nowrap;
 
       a {
-        text-underline-offset: 6px;
+        text-underline-offset: 0.6rem;
       }
     }
   }

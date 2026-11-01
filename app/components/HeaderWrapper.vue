@@ -55,9 +55,9 @@ useSeoMeta({
 @import url("@/scss/colors.scss");
 
 .header-wrapper {
-  padding: 50px 0 30px;
+  padding: 5rem 0 3rem;
   @media (max-width: 600px) {
-    padding: 0 0 30px;
+    padding: 0 0 3rem;
   }
 
   .header {
@@ -73,18 +73,14 @@ useSeoMeta({
 
       align-self: center;
 
-      h1 {
-        min-height: 72px;
-      }
-
       .profession {
-        font-size: 1.2em;
-        margin: 0 0 30px;
-        min-height: 29px;
+        font-size: 2rem;
+        margin: 0 0 3rem;
+        min-height: 2.9rem;
       }
 
       h2 {
-        min-height: 48px;
+        min-height: 4.8rem;
       }
     }
 
@@ -93,7 +89,7 @@ useSeoMeta({
       display: flex;
       align-self: flex-end;
       object-fit: contain;
-      min-height: 400px;
+      min-height: 40rem;
       background-image:
         light-dark(
           linear-gradient(
@@ -142,7 +138,7 @@ useSeoMeta({
       }
 
       .skeleton {
-        margin-left: 20px;
+        margin-left: 2rem;
         width: 100%;
       }
     }

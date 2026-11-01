@@ -19,12 +19,12 @@ if (exam.error.value) {
 
 <style scoped>
 .examples-wrapper {
-  padding: 30px 0;
+  padding: 3rem 0;
 
   h2 {
     text-align: center;
-    min-height: 48px;
-    margin: 0 0 20px;
+    min-height: 4.8rem;
+    margin: 0 0 2rem;
   }
 }
 </style>

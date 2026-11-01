@@ -26,15 +26,15 @@ if (favo.error.value || soft.error.value || libs.error.value) {
 
 <style scoped>
 .favorites-wrapper {
-  padding: 30px 0;
+  padding: 3rem 0;
   h2 {
     text-align: center;
-    min-height: 48px;
+    min-height: 4.8rem;
   }
   .favorites {
     h3 {
       text-align: center;
-      min-height: 36px;
+      min-height: 3.6rem;
     }
   }
 }

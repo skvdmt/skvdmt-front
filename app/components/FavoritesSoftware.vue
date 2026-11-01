@@ -37,32 +37,32 @@ if (software.error.value) {
 @import url("@/scss/colors.scss");
 
 .soft {
-  margin: 0 0 30px;
+  margin: 0 0 3rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 2rem;
 
   .app {
     background-color: var(--background-color-dark);
     text-align: center;
     flex-grow: 1;
-    width: 220px;
-    min-height: 138px;
-    border-radius: 10px;
-    padding: 20px;
+    width: 22rem;
+    min-height: 13.8rem;
+    border-radius: 1rem;
+    padding: 2rem;
 
     @media (max-width: 768px) {
-      width: 100px;
+      width: 10rem;
     }
 
     img {
       display: block;
-      margin: 0 auto 10px;
+      margin: 0 auto 1rem;
     }
 
     a {
-      text-underline-offset: 6px;
+      text-underline-offset: 0.6rem;
     }
   }
 }

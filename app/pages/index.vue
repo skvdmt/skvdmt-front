@@ -20,12 +20,18 @@
 }
 
 :root {
+  font-size: 62.5%;
+
   line-height: 1.5;
   letter-spacing: 0.02em;
   font-weight: 300;
   font-family: OpenSans, serif;
   background-color: var(--background-color-very-dark);
   color: var(--color);
+
+  body {
+    font-size: 1.6rem;
+  }
 
   a {
     color: var(--link-color);
@@ -36,30 +42,31 @@
   }
 
   h1 {
-    font-size: 3em;
+    font-size: 4.8rem;
     font-weight: 500;
     margin: 0;
+    line-height: 1.2;
   }
 
   h2 {
-    font-size: 2em;
+    font-size: 3.2rem;
     font-weight: 400;
-    margin: 0 0 10px;
+    margin: 0 0 1rem;
   }
 
   h3 {
-    font-size: 1.5em;
+    font-size: 2.4rem;
     font-weight: 350;
-    margin: 0 0 10px;
+    margin: 0 0 1rem;
   }
 
   p {
-    margin: 0 0 10px;
+    margin: 0 0 1rem;
   }
 
   a {
     color: var(--link-color);
-    text-underline-offset: 4px;
+    text-underline-offset: 0.4em;
   }
 
   a:visited {
@@ -68,10 +75,10 @@
 
   .container {
     margin: 0 auto;
-    padding: 0 30px;
-    max-width: 1320px;
+    padding: 0 3rem;
+    max-width: 132rem;
     @media (max-width: 600px) {
-      padding: 20px;
+      padding: 2rem;
     }
   }
 

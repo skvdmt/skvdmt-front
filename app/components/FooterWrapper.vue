@@ -56,37 +56,37 @@ if (abou.error.value || loca.error.value || links.error.value) {
 @import url("@/scss/colors.scss");
 
 .footer-wrapper {
-  padding: 30px 0 50px;
+  padding: 3rem 0 5rem;
   @media (max-width: 600px) {
-    padding: 30px 0 0;
+    padding: 3rem 0 0;
   }
 
   .links {
-    margin: 0 0 50px;
+    margin: 0 0 5rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 40px 20px;
+    gap: 4rem 2rem;
 
     .link {
-      min-height: 106px;
+      min-height: 10.6rem;
       text-align: center;
       flex-grow: 1;
 
       img {
         display: block;
-        margin: 0 auto 10px;
-        width: 48px;
+        margin: 0 auto 1rem;
+        width: 4.8rem;
       }
 
       a {
         color: var(--footer-link-color-title);
         line-height: 1.5em;
-        text-underline-offset: 6px;
+        text-underline-offset: 0.6rem;
         text-wrap: nowrap;
 
         .url {
-          font-size: 14px;
+          font-size: 1.4rem;
           color: var(--footer-link-color-url);
         }
       }
@@ -100,10 +100,10 @@ if (abou.error.value || loca.error.value || links.error.value) {
   .location {
     color: var(--location-color);
     text-align: center;
-    font-size: 0.9em;
+    font-size: 1.4rem;
 
     p {
-      min-height: 21px;
+      min-height: 2.1rem;
     }
   }
 }
