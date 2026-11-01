@@ -66,7 +66,7 @@
 
   a {
     color: var(--link-color);
-    text-underline-offset: 0.4em;
+    text-underline-offset: 0.4rem;
   }
 
   a:visited {
