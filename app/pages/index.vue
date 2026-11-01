@@ -22,15 +22,15 @@
 :root {
   font-size: 62.5%;
 
-  line-height: 1.5;
   letter-spacing: 0.02em;
   font-weight: 300;
-  font-family: OpenSans, serif;
   background-color: var(--background-color-very-dark);
   color: var(--color);
 
   body {
+    line-height: 1.5;
     font-size: 1.6rem;
+    font-family: OpenSans, serif;
   }
 
   a {
