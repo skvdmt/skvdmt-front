@@ -82,6 +82,10 @@ examples.data.value.forEach((ex) => {
       min-width: 20rem;
     }
 
+    h3 {
+      margin-left: -0.05em;
+    }
+
     img {
       display: block;
       margin: 4rem auto;

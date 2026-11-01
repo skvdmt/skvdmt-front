@@ -73,6 +73,10 @@ useSeoMeta({
 
       align-self: center;
 
+      h1 {
+        margin-left: -0.05em;
+      }
+
       .profession {
         font-size: 2rem;
         margin: 0 0 3rem;
