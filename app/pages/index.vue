@@ -24,7 +24,7 @@
 
   letter-spacing: 0.02em;
   font-weight: 300;
-  background-color: var(--background-color-very-dark);
+  background-color: var(--background-document);
   color: var(--color);
 
   body {

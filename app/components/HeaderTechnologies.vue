@@ -50,7 +50,7 @@ if (technologies.error.value) {
   gap: 1rem;
 
   .technology {
-    background-color: var(--background-color-light);
+    background-color: var(--background-technology);
     display: flex;
     padding: 1rem;
     border-radius: 0.8rem;

@@ -44,7 +44,7 @@ if (software.error.value) {
   gap: 2rem;
 
   .app {
-    background-color: var(--background-color-dark);
+    background-color: var(--background-app);
     text-align: center;
     flex-grow: 1;
     width: 22rem;

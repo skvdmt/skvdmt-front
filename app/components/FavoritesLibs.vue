@@ -35,9 +35,9 @@ if (libs.error.value) {
   flex-wrap: wrap;
 
   a {
-    background-color: var(--background-color-very-light);
-    border-radius: 0.4rem;
-    padding: 0.3rem 0.5rem;
+    background-color: var(--background-lib);
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.7rem;
     text-wrap: nowrap;
   }
 }

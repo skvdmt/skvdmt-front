@@ -1,9 +1,12 @@
 :root {
   color-scheme: light dark;
-  --background-color-very-dark: light-dark(#eee, #111); // 1
-  --background-color-dark: light-dark(#e6e6e6, #141414); // 2
-  --background-color-light: light-dark(#e0e0e0, #222); // 3
-  --background-color-very-light: light-dark(#c9c9c9, #333); // 4
+  --background-document: light-dark(#ecf0f1, #111);
+  --background-app: light-dark(#e6e6e6, #141414);
+  --background-technology: light-dark(#dfe6e9, #222);
+  --background-example: light-dark(#dfe4ea, #222);
+  --background-lib: light-dark(#d9dce4, #222);
+  --background-example-link: light-dark(#f6e58d, #040);
+  --background-example-source: light-dark(#d9dce4, #2d3436);
   --color: light-dark(rgb(0, 0, 0, 0.87), rgb(255, 255, 255, 0.87));
   --link-color: light-dark(#336399, #99c3ff);
   --link-color-visited: light-dark(#652a99, #c58af9);

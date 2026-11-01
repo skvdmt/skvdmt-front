@@ -18,6 +18,15 @@ examples.data.value.forEach((ex) => {
   ex.technologiesString = ts;
   ex.descriptionArray = ex.description.split("\r\n");
 });
+
+/**
+ * Перевод первого символа строки в верхний регистр.
+ * @param str - Строка.
+ */
+function ucFirst(str) {
+  if (!str) return str; // проверка на пустую строку
+  return str[0].toUpperCase() + str.slice(1);
+}
 </script>
 
 <template>
@@ -36,7 +45,7 @@ examples.data.value.forEach((ex) => {
       </div>
       <div class="links" v-if="example.links">
         <a :href="link.url" v-for="link in example.links" :key="link.title">{{
-          link.title
+          ucFirst(link.title)
         }}</a>
       </div>
       <div class="technologies">
@@ -67,7 +76,7 @@ examples.data.value.forEach((ex) => {
 
   .example {
     min-height: 60rem;
-    background-color: var(--background-color-light);
+    background-color: var(--background-example);
     flex-grow: 1;
     width: 35rem;
     border-radius: 1rem;
@@ -102,9 +111,9 @@ examples.data.value.forEach((ex) => {
       gap: 0.5rem;
 
       a {
-        background-color: var(--background-color-very-light);
-        border-radius: 0.4rem;
-        padding: 0.3rem 0.5rem;
+        background-color: var(--background-example-link);
+        border-radius: 0.5rem;
+        padding: 0.5rem 0.7rem;
         text-wrap: nowrap;
       }
     }
@@ -123,14 +132,14 @@ examples.data.value.forEach((ex) => {
       flex-wrap: wrap;
 
       .title {
-        padding: 0.3rem 0;
+        padding: 0.5rem 0;
         font-weight: 400;
       }
 
       a {
-        background-color: var(--background-color-very-light);
-        border-radius: 0.4rem;
-        padding: 0.3rem 0.5rem;
+        background-color: var(--background-example-source);
+        border-radius: 0.5rem;
+        padding: 0.5rem 0.7rem;
         text-wrap: nowrap;
       }
     }
