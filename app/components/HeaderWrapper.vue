@@ -7,8 +7,11 @@ const defaultDescription =
 const defaultKeywords =
   "Go, Postgres, Docker, REST API, gRPC, Git, CI/CD, JavaScript, Vue, Nuxt";
 
-const [main, prof, tech] = await Promise.all([
+const [main, runm, prof, tech] = await Promise.all([
   useFetch(() => `${config.public.apiBase}/text/main`, {
+    timeout: config.public.timeout,
+  }),
+  useFetch(() => `${config.public.apiBase}/text/runm`, {
     timeout: config.public.timeout,
   }),
   useFetch(() => `${config.public.apiBase}/text/prof`, {
@@ -24,8 +27,12 @@ if (main.error.value || prof.error.value || tech.error.value) {
 }
 
 const mainText = main.data.value?.text;
+const runmText = runm.data.value?.text;
 const profText = prof.data.value?.text;
-const title = mainText && profText ? `${mainText} - ${profText}` : defaultTitle;
+const title =
+  mainText && profText
+    ? `${mainText} (${runmText}) — ${profText}`
+    : defaultTitle;
 
 useSeoMeta({
   title: title,
@@ -40,7 +47,10 @@ useSeoMeta({
     <div class="container">
       <div class="header">
         <div class="about">
-          <h1 id="main_header">{{ main.data.value?.text }}</h1>
+          <h1 id="main_header">
+            {{ main.data.value?.text }}
+            <div class="ru">{{ runm.data.value?.text }}</div>
+          </h1>
           <p id="profession" class="profession">{{ prof.data.value?.text }}</p>
           <h2 id="second_header">{{ tech.data.value?.text }}</h2>
           <HeaderTechnologies />
@@ -75,6 +85,12 @@ useSeoMeta({
 
       h1 {
         margin-left: -0.05em;
+        div.ru {
+          margin-left: 0.1em;
+          font-size: 1.8rem;
+          font-weight: 400;
+          color: var(--runm-color);
+        }
       }
 
       .profession {
