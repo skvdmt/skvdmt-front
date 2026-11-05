@@ -7,7 +7,7 @@ const defaultDescription =
 const defaultKeywords =
   "Go, Postgres, Docker, REST API, gRPC, Git, CI/CD, JavaScript, Vue, Nuxt";
 
-const [main, runm, prof, tech] = await Promise.all([
+const [main, runm, prof, dist, high, tech] = await Promise.all([
   useFetch(() => `${config.public.apiBase}/text/main`, {
     timeout: config.public.timeout,
   }),
@@ -17,12 +17,25 @@ const [main, runm, prof, tech] = await Promise.all([
   useFetch(() => `${config.public.apiBase}/text/prof`, {
     timeout: config.public.timeout,
   }),
+  useFetch(() => `${config.public.apiBase}/text/dist`, {
+    timeout: config.public.timeout,
+  }),
+  useFetch(() => `${config.public.apiBase}/text/high`, {
+    timeout: config.public.timeout,
+  }),
   useFetch(() => `${config.public.apiBase}/text/tech`, {
     timeout: config.public.timeout,
   }),
 ]);
 
-if (main.error.value || prof.error.value || tech.error.value) {
+if (
+  main.error.value ||
+  runm.error.value ||
+  prof.error.value ||
+  dist.error.value ||
+  high.error.value ||
+  tech.error.value
+) {
   throw new Error("Error loading data from the server.");
 }
 
@@ -51,7 +64,11 @@ useSeoMeta({
             {{ main.data.value?.text }}
             <div class="ru">{{ runm.data.value?.text }}</div>
           </h1>
-          <p id="profession" class="profession">{{ prof.data.value?.text }}</p>
+          <p id="profession" class="profession">
+            <span class="prof">{{ prof.data.value?.text }}</span>
+            <span class="dist">{{ dist.data.value?.text }}</span>
+            <span class="high">{{ high.data.value?.text }}</span>
+          </p>
           <h2 id="second_header">{{ tech.data.value?.text }}</h2>
           <HeaderTechnologies />
         </div>
@@ -95,8 +112,16 @@ useSeoMeta({
 
       .profession {
         font-size: 2rem;
+        line-height: 1.2;
         margin: 0 0 3rem;
-        min-height: 2.9rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        .prof,
+        .dist,
+        .high {
+          overflow-wrap: break-word;
+        }
       }
 
       h2 {
