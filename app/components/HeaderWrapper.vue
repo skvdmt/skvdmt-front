@@ -7,7 +7,7 @@ const defaultDescription =
 const defaultKeywords =
   "Go, Postgres, Docker, REST API, gRPC, Git, CI/CD, JavaScript, Vue, Nuxt";
 
-const [main, runm, prof, dist, high, tech] = await Promise.all([
+const [main, runm, prof, dist, high, tech, slog] = await Promise.all([
   useFetch(() => `${config.public.apiBase}/text/main`, {
     timeout: config.public.timeout,
   }),
@@ -26,6 +26,9 @@ const [main, runm, prof, dist, high, tech] = await Promise.all([
   useFetch(() => `${config.public.apiBase}/text/tech`, {
     timeout: config.public.timeout,
   }),
+  useFetch(() => `${config.public.apiBase}/text/slog`, {
+    timeout: config.public.timeout,
+  }),
 ]);
 
 if (
@@ -34,7 +37,8 @@ if (
   prof.error.value ||
   dist.error.value ||
   high.error.value ||
-  tech.error.value
+  tech.error.value ||
+  slog.error.value
 ) {
   throw new Error("Error loading data from the server.");
 }
@@ -72,7 +76,9 @@ useSeoMeta({
           <h2 id="second_header">{{ tech.data.value?.text }}</h2>
           <HeaderTechnologies />
         </div>
-        <div class="photo"></div>
+        <div class="photo">
+          <div class="slog">{{ slog.data.value?.text }}</div>
+        </div>
       </div>
     </div>
   </div>
@@ -132,8 +138,7 @@ useSeoMeta({
     .photo {
       width: 45%;
       display: flex;
-      align-self: flex-end;
-      object-fit: contain;
+      flex-direction: column;
       min-height: 40rem;
       background-image:
         light-dark(
@@ -185,6 +190,22 @@ useSeoMeta({
       .skeleton {
         margin-left: 2rem;
         width: 100%;
+      }
+      .slog {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        background-color: var(--slog-background);
+        color: var(--color);
+        width: 75%;
+        padding: 2rem;
+        opacity: 0.9;
+        border-radius: 1.5rem;
+        font-size: 1.8rem;
+        font-style: italic;
+        font-weight: 400;
+        border: 2px solid var(--slog-border);
+        text-shadow: 0rem 0rem 0.3rem var(--slog-shadow);
       }
     }
   }
