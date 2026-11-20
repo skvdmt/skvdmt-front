@@ -125,4 +125,15 @@
     }
   }
 }
+
+:root {
+  color-scheme: light dark;
+  --left-dialog: 50%;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --left-dialog: 45%;
+  }
+}
 </style>

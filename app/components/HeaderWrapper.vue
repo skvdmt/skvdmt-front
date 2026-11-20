@@ -192,6 +192,7 @@ useSeoMeta({
         width: 100%;
       }
       .slog {
+        position: relative;
         margin-left: auto;
         margin-right: auto;
         margin-top: auto;
@@ -206,6 +207,25 @@ useSeoMeta({
         font-weight: 400;
         border: 2px solid var(--slog-border);
         text-shadow: 0rem 0rem 0.3rem var(--slog-shadow);
+      }
+      .slog::before,
+      .slog::after {
+        content: "";
+        position: absolute;
+        bottom: 100%;
+        width: 0;
+        height: 0;
+        border-style: solid;
+      }
+      .slog::before {
+        left: calc(var(--left-dialog) - 0.2rem);
+        border-width: 30px 0 0 30px;
+        border-color: transparent transparent transparent var(--slog-border);
+      }
+      .slog::after {
+        left: var(--left-dialog);
+        border-width: 25px 0 0 25px;
+        border-color: transparent transparent transparent var(--slog-background);
       }
     }
   }
