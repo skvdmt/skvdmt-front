@@ -44,6 +44,7 @@ jobs:
               --name ${{ github.event.repository.name }} \
               --memory="128m" \
               --cpus="0.5" \
+              --ip ${{ vars.CONTAINER_IP }} \
               --env NODE_OPTIONS="--max-old-space-size=48" \
               --volume ${{ secrets.HOME }}/logs/${{ github.event.repository.name }}:/var/log/${{ github.event.repository.name }} \
               --restart unless-stopped \
