@@ -1,5 +1,10 @@
+<script setup lang="ts">
+import DockerStatsWrapper from "~/components/DockerStatsWrapper.vue";
+</script>
+
 <template>
   <HeaderWrapper />
+  <DockerStatsWrapper />
   <ExamplesWrapper />
   <FavoritesWrapper />
   <FooterWrapper />
@@ -46,6 +51,15 @@
   unicode-range:
     U+2013-2014, U+2018-201F, U+2022, U+2026, U+2030, U+20AC, U+20BD, U+2116,
     U+2122, U+2190-2193, U+2212;
+}
+
+@font-face {
+  font-family: "Ubuntu Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("~/assets/fonts/UbuntuMono-Latin-Normal.woff2") format("woff2");
+  unicode-range: U+20-7e;
 }
 
 * {

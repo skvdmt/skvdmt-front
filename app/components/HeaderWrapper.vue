@@ -139,7 +139,7 @@ useSeoMeta({
       width: 45%;
       display: flex;
       flex-direction: column;
-      min-height: 40rem;
+      min-height: 30rem;
       background-image:
         light-dark(
           linear-gradient(
